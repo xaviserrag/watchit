@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-import moviesReducer from './reducers/movies';
+import logo from '../../public/logo.svg';
+import '../css/App.css';
 
 class App extends Component {
   render() {
-    moviesReducer();
     return (
       <div className="App">
         <div className="App-header">
@@ -16,6 +13,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <div className="App-footer">
+          <div className="Moviesdb-logo">
+            <img src="themoviedb.png" alt="themoviedb logo"/>
+          </div>  
+        </div>
+        
       </div>
     );
   }
