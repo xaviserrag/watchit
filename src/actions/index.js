@@ -34,7 +34,6 @@ function fetchMovie() {
       .then(response => response.json())
       .then(data => {
           let randomItem = getRandomInt(0, ITEMS_PAGE - 1);
-          console.log(data, randomItem, data.results[randomItem]);
           return dispatch(receiveMovie(data.results[randomItem]));
       });
   };

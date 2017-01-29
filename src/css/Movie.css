@@ -1,0 +1,14 @@
+
+.Movie img {    
+  margin-left: 15vw;
+  margin-right: 15vw;
+  width: 70vw;
+  height: calc(0.07vw * 750px);
+  scale: 0.8;
+  object-fit: cover;
+  display: none;
+}
+
+.Movie .poster {
+  display: block;
+}
