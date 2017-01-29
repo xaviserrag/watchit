@@ -7,7 +7,7 @@ class Movie extends Component {
     return (
       <div>
         <h1>{props ? props.title : ''}</h1>
-        <button onClick={props.onGetMovieClick} ></button>
+        <button onClick={props.onGetMovieClick} > Get a random movie!</button>
       </div>
     )
   }
