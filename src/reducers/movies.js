@@ -1,10 +1,10 @@
 import {
   REQUEST_MOVIE, RECEIVE_MOVIE
-} from '../actions/index';
+} from '../actions/movies';
 
 const defaultState = {
   movie: {},
-  isFething: false
+  isFetching: false
 };
 
 export default (state = defaultState, action) => {

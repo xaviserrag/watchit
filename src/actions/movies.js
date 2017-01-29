@@ -17,11 +17,11 @@ export function requestMovie() {
 export function receiveMovie(movie) {
   return {
     type: RECEIVE_MOVIE,
-    movie: movie
+    movie
   }
 };
 
-function fetchMovie() {
+function fetchMovie(genres) {
   return function (dispatch) {
     let page = getRandomInt(0, TOTAL_PAGES);
     let url = `https://api.themoviedb.org/3/discover/` + 
@@ -33,27 +33,36 @@ function fetchMovie() {
     return fetch(url)
       .then(response => response.json())
       .then(data => {
-          let randomItem = getRandomInt(0, ITEMS_PAGE - 1);
-          return dispatch(receiveMovie(data.results[randomItem]));
+          let randInt = getRandomInt(0, ITEMS_PAGE - 1);
+          let movie = data.results[randInt];
+          
+          // Transform genre ids to genre names
+          movie.genres = [];
+          movie.genre_ids.forEach((id) => {
+            movie.genres.push(genres[id]);
+          });
+
+          return dispatch(receiveMovie());
       });
   };
 };
 
 function shouldFetchMovie(state) {
-  return !state.isFetching;
+  return !state.movies.isFetching;
 };
 
 export function fetchMovieIfAvailable() {
   return (dispatch, getState) => {
-    if (shouldFetchMovie(getState())) {
-      return dispatch(fetchMovie())
+    let state = getState();
+    if (shouldFetchMovie(state)) {
+      return dispatch(fetchMovie(state.genres))
     } else {
       return Promise.resolve();
     }
   }
 };
 
-//// REQUEST IF FETCH DOESN'T WORK ////
+//// TODO: REQUEST IF FETCH DOESN'T WORK. ADD LATER ////
 // const requestCall = () => {
 //   let xhr = new XMLHttpRequest();
 //   let page = getRandomInt(0, totalPages);

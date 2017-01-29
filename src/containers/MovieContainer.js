@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
 import Movie from '../components/Movie';
-import { fetchMovieIfAvailable } from '../actions/index.js';
+import { fetchMovieIfAvailable } from '../actions/movies.js';
 
-const mapStateToProps = (state) => state.movie || {};
+const mapStateToProps = (state) => state.movies.movie || {};
 const mapDispatchToProps = (dispatch) => {
   return {
     onGetMovieClick: () => {
