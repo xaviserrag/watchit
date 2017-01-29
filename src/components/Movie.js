@@ -11,24 +11,23 @@ class Movie extends Component {
     let genresList = [];
 
     if (hasMovie) {
-      imgUrl = props.poster_path ? props.poster_path : props.backdrop_path;
+      imgUrl = IMG_BASE_URL + (props.poster_path ? props.poster_path : props.backdrop_path);
       genresList = props.genres.map((genre) =>
         <li key={genre}>{genre}</li>
       );
     }
-    
+
     return (
       <section className="Movie">
         <article>
           <h1>{props ? props.title : ''}</h1>
-          <img className={props.title ? 'poster' : ''} src={IMG_BASE_URL + imgUrl} alt="" />
+          <img src={imgUrl} alt="" />
           <ul>
             {genresList}
           </ul>
           <p>{props.overview}</p>
-
-          <button onClick={props.onGetMovieClick} > Get a random movie!</button>
         </article>
+        <button onClick={props.onGetMovieClick} >Get a random movie!</button>
       </section>
     )
   }
