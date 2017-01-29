@@ -44,7 +44,7 @@ function shouldFetchMovie(state) {
   return !state.isFetching;
 };
 
-export function fetchMovieIfNeeded() {
+export function fetchMovieIfAvailable() {
   return (dispatch, getState) => {
     if (shouldFetchMovie(getState())) {
       return dispatch(fetchMovie())
@@ -55,7 +55,6 @@ export function fetchMovieIfNeeded() {
 };
 
 //// REQUEST IF FETCH DOESN'T WORK ////
-
 // const requestCall = () => {
 //   let xhr = new XMLHttpRequest();
 //   let page = getRandomInt(0, totalPages);
