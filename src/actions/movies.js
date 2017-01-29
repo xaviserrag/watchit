@@ -42,7 +42,7 @@ function fetchMovie(genres) {
             movie.genres.push(genres[id]);
           });
 
-          return dispatch(receiveMovie());
+          return dispatch(receiveMovie(movie));
       });
   };
 };
