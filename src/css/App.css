@@ -13,19 +13,12 @@
 
 .Moviesdb-logo img {
   width: 200px;
-  height: auto;
+  height: 58px;
+  margin-top: 31px;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-footer {
-  bottom: 0;
-  background-color: white;
   height: 150px;
   padding: 20px;
   color: white;
