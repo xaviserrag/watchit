@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import MovieContainer from './containers/MovieContainer';
-import Footer from './containers/Footer';
+import FooterContainer from './containers/FooterContainer';
 
 import './css/App.css';
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <MovieContainer />
-        <Footer />
+        <FooterContainer />
       </div>
     );
   }

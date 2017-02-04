@@ -27,7 +27,6 @@ class Movie extends Component {
           </ul>
           <p>{props.overview}</p>
         </article>
-        <button onClick={props.onGetMovieClick} >Get a random movie!</button>
       </section>
     )
   }
