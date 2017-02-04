@@ -24,8 +24,9 @@ export function receiveMovie(movie) {
 function fetchMovie(genres) {
   return function (dispatch) {
     let page = getRandomInt(0, TOTAL_PAGES);
+    let apiKey = '23564cb33be66abe06ab37d2417ce3b3';
     let url = `https://api.themoviedb.org/3/discover/` + 
-    `movie?api_key=23564cb33be66abe06ab37d2417ce3b3&language=en-US& ` + 
+    `movie?api_key=${apiKey}&language=en-US& ` + 
     `sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
 
     dispatch(requestMovie());
@@ -35,14 +36,28 @@ function fetchMovie(genres) {
       .then(data => {
           let randInt = getRandomInt(0, ITEMS_PAGE - 1);
           let movie = data.results[randInt];
-          
-          // Transform genre ids to genre names
-          movie.genres = [];
-          movie.genre_ids.forEach((id) => {
-            movie.genres.push(genres[id]);
-          });
+          let movieUrl = `https://api.themoviedb.org/3/movie/${movie.id}?api_key=${apiKey}&language=en-US`;
 
-          return dispatch(receiveMovie(movie));
+          // Once get the id of the movie, ask for all the information
+          // of the movie to the server.
+          // Also imbd id is provided, so maybe more information can be obtained
+          fetch(movieUrl)
+            .then(response => response.json())
+            .then(movieData => {
+              return dispatch(receiveMovie(movieData));
+              // movieData.genres = [];
+              // movieData.genre_ids.forEach((id) => {
+              //   movie.genres.push(genres[id]);
+              // });    
+            });
+
+          // Transform genre ids to genre names
+          // not necessary anymore because new info has it already
+          // movie.genres = [];
+          // movie.genre_ids.forEach((id) => {
+          //   movie.genres.push(genres[id]);
+          // });
+
       });
   };
 };

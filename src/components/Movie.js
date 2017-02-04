@@ -13,7 +13,7 @@ class Movie extends Component {
     if (hasMovie) {
       imgUrl = IMG_BASE_URL + (props.poster_path ? props.poster_path : props.backdrop_path);
       genresList = props.genres.map((genre) =>
-        <li key={genre}>{genre}</li>
+        <li key={genre.name}>{genre.name}</li>
       );
     }
 
