@@ -22,11 +22,10 @@ const store = createStore(
 );
 
 const setupInitialData = () => store.dispatch(fetchGenres());
-
 setupInitialData();
 render(
   <Provider store={store}>
-    <App />
+    <App store={store}/>
   </Provider>,
   document.getElementById('root')
 );
