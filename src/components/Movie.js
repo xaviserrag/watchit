@@ -10,6 +10,7 @@ class Movie extends Component {
     let imgUrl = '';
     let genresList = [];
     let showClass = 'movie-hidden';
+    let yearRelease;
 
     if (hasMovie) {
       imgUrl = IMG_BASE_URL + (props.poster_path ? props.poster_path : props.backdrop_path);
@@ -17,12 +18,13 @@ class Movie extends Component {
         <li key={genre.name}>{genre.name}</li>
       );
       showClass = 'movie-show';
+      yearRelease = props.release_date.split('-')[0];
     }
 
     return (
       <section className={'Movie ' + showClass}>
         <article>
-          <h1>{props ? props.title : ''}</h1>
+          <h1>{`${props.title} (${yearRelease})`}</h1>
           <img src={imgUrl} alt="" />
           <ul>
             {genresList}

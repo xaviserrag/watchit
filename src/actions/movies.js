@@ -63,8 +63,8 @@ function fetchMovie(genres) {
 
               getImage(imgUrl)
                 .then(() => {
-                return dispatch(receiveMovie(movieData));
-              });
+                  return dispatch(receiveMovie(movieData));
+                });
             });
 
           // Transform genre ids to genre names
