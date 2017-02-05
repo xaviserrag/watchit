@@ -21,6 +21,19 @@ export function receiveMovie(movie) {
   }
 };
 
+function getImage(url){
+  return new Promise(function(resolve, reject){
+    var img = new Image()
+    img.onload = function(){
+      resolve(url);
+    };
+    img.onerror = function(){
+      reject(url);
+    };
+    img.src = url;
+  });
+};
+
 function fetchMovie(genres) {
   return function (dispatch) {
     let page = getRandomInt(0, TOTAL_PAGES);
@@ -44,11 +57,14 @@ function fetchMovie(genres) {
           fetch(movieUrl)
             .then(response => response.json())
             .then(movieData => {
-              return dispatch(receiveMovie(movieData));
-              // movieData.genres = [];
-              // movieData.genre_ids.forEach((id) => {
-              //   movie.genres.push(genres[id]);
-              // });    
+
+              //Once getting the info, wait to load the img.
+              let imgUrl = 'https://image.tmdb.org/t/p/w500/' + (movieData.poster_path ? movieData.poster_path : movieData.backdrop_path);
+
+              getImage(imgUrl)
+                .then(() => {
+                return dispatch(receiveMovie(movieData));
+              });
             });
 
           // Transform genre ids to genre names

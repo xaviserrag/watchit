@@ -9,16 +9,18 @@ class Movie extends Component {
     let hasMovie = this.props.title;
     let imgUrl = '';
     let genresList = [];
+    let showClass = 'movie-hidden';
 
     if (hasMovie) {
       imgUrl = IMG_BASE_URL + (props.poster_path ? props.poster_path : props.backdrop_path);
       genresList = props.genres.map((genre) =>
         <li key={genre.name}>{genre.name}</li>
       );
+      showClass = 'movie-show';
     }
 
     return (
-      <section className="Movie">
+      <section className={'Movie ' + showClass}>
         <article>
           <h1>{props ? props.title : ''}</h1>
           <img src={imgUrl} alt="" />

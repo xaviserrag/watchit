@@ -1,0 +1,20 @@
+.logo-centered {
+  display: block;
+  height: calc(100vh - 125px);
+  white-space: nowrap;
+  margin-bottom: -125px;
+}
+.logo-top {
+  display: none;
+}
+
+.logo-centered span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.logo-centered img {
+   vertical-align: middle;
+   max-width: 90vw;
+}

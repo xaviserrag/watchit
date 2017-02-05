@@ -4,8 +4,3 @@ body {
   background-color: #b3d9e3;
   font-family: 'Oswald', sans-serif;
 }
-
-.App .logo {
-  margin: calc(50vh - 120px) 0;
-  max-width: 80vw;
-}
