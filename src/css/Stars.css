@@ -1,0 +1,64 @@
+.Stars {
+  width: 122px;
+  height: 25px;
+}
+
+.Stars .empty-stars {
+  margin-top: -25px;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/rating-stars-empty.png');
+  background-repeat: no-repeat;
+}
+
+.Stars .full-stars {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/rating-stars-full.png');
+  background-repeat: no-repeat;
+}
+
+.Stars .full-stars.star-1 {
+  width: 10%;
+}
+
+.Stars .full-stars.star-1 {
+  width: 10%;
+}
+
+.Stars .full-stars.star-2 {
+  width: 20%;
+}
+
+.Stars .full-stars.star-3 {
+  width: 30%;
+}
+
+.Stars .full-stars.star-4 {
+  width: 40%;
+}
+
+.Stars .full-stars.star-5 {
+  width: 50%;
+}
+
+.Stars .full-stars.star-6 {
+  width: 60%;
+}
+
+.Stars .full-stars.star-7 {
+  width: 70%;
+}
+
+.Stars .full-stars.star-8 {
+  width: 80%;
+}
+
+.Stars .full-stars.star-9 {
+  width: 90%;
+}
+
+.Stars .full-stars.star-10 {
+  width: 100%;
+}
+

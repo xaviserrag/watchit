@@ -6,7 +6,6 @@ const mapStateToProps = (state) => state.movies.movie || {};
 
 const MovieContainer = connect(
   mapStateToProps,
-  // mapDispatchToProps
 )(Movie);
 
 export default MovieContainer;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Stars from './Stars';
 import '../css/Movie.css';
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
@@ -16,7 +17,7 @@ class MovieOverview extends Component {
         <li key={genre.name}>{genre.name}</li>
       );
    
-    let yearRelease = movie.release_date.split('-')[0];;
+    let yearRelease = movie.release_date.split('-')[0];
     let title = `${movie.title} (${yearRelease})`;
 
     let duration = '';
@@ -27,6 +28,7 @@ class MovieOverview extends Component {
     return (
       <div className="MovieOverview">
         <h1>{title}</h1>
+        <Stars rating={movie.vote_average} votes={movie.vote_count} />
         <h3>{duration}</h3>
         <img src={imgUrl} alt="Movie poster" />
         <ul>

@@ -59,8 +59,15 @@ function fetchMovie(genres) {
             .then(movieData => {
 
               //Once getting the info, wait to load the img.
-              let imgUrl = 'https://image.tmdb.org/t/p/w500/' + (movieData.poster_path ? movieData.poster_path : movieData.backdrop_path);
+              let imagePath = movieData.poster_path 
+                ? movieData.poster_path 
+                : movieData.backdrop_path;
+                
+              if (!imagePath) {
+                return dispatch(receiveMovie(movieData));
+              }
 
+              let imgUrl = 'https://image.tmdb.org/t/p/w500/' + imagePath;
               getImage(imgUrl)
                 .then(() => {
                   return dispatch(receiveMovie(movieData));
