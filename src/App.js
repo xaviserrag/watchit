@@ -7,11 +7,6 @@ import LogoContainer from './containers/LogoContainer';
 import './css/App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    
-  };
-
   render() {
 
     return (

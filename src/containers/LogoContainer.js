@@ -12,7 +12,7 @@ class Logo extends Component {
 
     return (
       <div className={logoClass}>
-        <span class="logo-helper"></span>
+        <span></span>
         <img className="logo" src="themoviedb.png" alt="watchit logo" />
       </div>
     )
