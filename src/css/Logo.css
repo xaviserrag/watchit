@@ -15,6 +15,7 @@
 }
 
 .logo-centered img {
-   vertical-align: middle;
-   max-width: 90vw;
+  vertical-align: middle;
+  width: 405px;
+  height: 116px;
 }
