@@ -8,13 +8,11 @@
 
 #Movie.movie-easein {
   animation: movie-appearance 0.3s;
-
   animation-fill-mode:forwards;
 }
 
 #Movie.movie-easeout {
   animation: movie-dissapear 0.3s;
-
   animation-fill-mode:forwards;
 }
 

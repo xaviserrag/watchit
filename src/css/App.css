@@ -2,21 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.Moviesdb-logo {
-  height: 120px;
-}
-
-.Moviesdb-logo img {
-  width: 200px;
-  height: 58px;
-  margin-top: 31px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
