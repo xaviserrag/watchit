@@ -29,3 +29,25 @@
 .MovieOverview img[src=""] {
 	display: none;
 }
+
+
+@media screen and (max-width: 700px) { 
+  .MovieOverview .basic-info {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+    text-align: center;
+  }
+  
+  .MovieOverview img {    
+    width: 65%;
+    margin-left: 17.5%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .MovieOverview .basic-info .movie-title {
+    font-size: 1.2rem;
+  }
+
+}

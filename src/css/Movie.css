@@ -12,8 +12,8 @@
   height: calc(100vh - 270px);
   margin-top: 120px;
   overflow-y: scroll;
- 
 }
+
  #Movie::-webkit-scrollbar { 
     display: none; 
 }
@@ -64,7 +64,7 @@
 	font-style: italic;
 }
 
-@media screen and (min-device-width: 1200px) { 
+@media screen and (min-width: 1200px) { 
   #Movie img {    
     width: 40%;
     height: 100%;
@@ -75,4 +75,11 @@
 	#Movie img[src=""] {
 		display: none;
 	}
+}
+
+@media screen and (max-width: 700px) { 
+  #Movie { 
+    margin-top: 80px;
+    height: calc(100vh - 210px);
+  }
 }

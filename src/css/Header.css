@@ -13,3 +13,13 @@
 	height: 47px;
 	margin-top: 10px;
 }
+
+
+@media screen and (max-device-width: 700px) { 
+	.Header {
+		height: 60px;
+	}
+	.Header img {
+		margin-top: 7px;
+	}
+}
