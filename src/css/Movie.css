@@ -9,14 +9,15 @@
   box-shadow: 0px 6px 1px 0px rgba(171,171,171,0.5);
 
   margin-bottom: 130px;  
-  height: calc(100vh - 210px);
-  margin-top: 84px;
-  overflow: scroll;
+  height: calc(100vh - 270px);
+  margin-top: 120px;
+  overflow-y: scroll;
  
 }
  #Movie::-webkit-scrollbar { 
     display: none; 
 }
+
 #Movie.movie-easein {
   animation: movie-appearance 0.5s;
   animation-fill-mode:forwards;
@@ -45,25 +46,6 @@
   }
 }
 
-#Movie h1 {
-  font-size: 2rem;
-  border-bottom: solid black 2px;
-}
-
-#Movie h1:empty {
-  border-bottom: none;
-}
-
-#Movie img {    
-  width: 70vw;
-  height: calc(70vw * 750px);
-  object-fit: cover;
-}
-
-#Movie img[src=""] {
-	display: none;
-}
-
 #Movie article {
   width: 70vw;
 	min-height: 30vh;
@@ -85,7 +67,8 @@
 @media screen and (min-device-width: 1200px) { 
   #Movie img {    
     width: 40%;
-    height: calc(40% * 750px);
+    height: 100%;
+    /*height: calc(40% * 750px);*/
     object-fit: cover;
   }
 

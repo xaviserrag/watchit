@@ -1,6 +1,8 @@
 .Stars {
   width: 122px;
   height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Stars .empty-stars {

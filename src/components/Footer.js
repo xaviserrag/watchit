@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <button onClick={this.props.onGetMovieClick} >Get a random movie!</button>
+        <button onClick={this.props.onGetMovieClick} >Give me a movie!</button>
         <div className="Moviesdb-logo">
           <a href="https://www.themoviedb.org">
             <img src="themoviedb.png" alt="themoviedb logo"/>

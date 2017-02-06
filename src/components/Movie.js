@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 
 import MovieOverview from './MovieOverview';
-import MovieSynopsis from './MovieSynopsis';
+// import MovieSynopsis from './MovieSynopsis';
 import '../css/Movie.css';
 
 class Movie extends Component {
@@ -17,7 +17,6 @@ class Movie extends Component {
         <section id="Movie" className={isLoadingClass}>
           <article>
             <MovieOverview movie={movie} />
-            <MovieSynopsis movie={movie} />
           </article>
         </section>
       )

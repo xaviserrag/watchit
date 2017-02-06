@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class MovieSynopsis extends Component {
-  render() {
-    return (
-      <p>{this.props.movie.overview}</p>
-    )
-  }
-};
+// class MovieSynopsis extends Component {
+//   render() {
+//     return (
+//       // <p>{this.props.movie.overview}</p>
+//     )
+//   }
+// };
 
-export default MovieSynopsis;
+// export default MovieSynopsis;

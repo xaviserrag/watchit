@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Stars from './Stars';
-import '../css/Movie.css';
+import '../css/MovieOverview.css';
 
 const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
 
@@ -13,9 +13,7 @@ class MovieOverview extends Component {
       : movie.backdrop_path;
     let imgUrl = IMG_BASE_URL + imagePath;
     
-    let genresList = movie.genres.map((genre) =>
-        <li key={genre.name}>{genre.name}</li>
-      );
+
    
     let yearRelease = movie.release_date.split('-')[0];
     let title = `${movie.title} (${yearRelease})`;
@@ -25,15 +23,20 @@ class MovieOverview extends Component {
       duration = Math.floor(movie.runtime / 60) + 'h ' + movie.runtime % 60 + 'm';
     }
 
+    let durationAndGenre = duration;
+    let genresList = movie.genres.map((genre) =>
+      durationAndGenre += (' | ' + genre.name)
+    );
+
     return (
       <div className="MovieOverview">
-        <h1>{title}</h1>
-        <Stars rating={movie.vote_average} votes={movie.vote_count} />
-        <h3>{duration}</h3>
         <img src={imgUrl} alt="Movie poster" />
-        <ul>
-          {genresList}
-        </ul>
+        <div className="basic-info">
+          <span className="movie-title"><strong>{movie.title}</strong> {`(${yearRelease})`}</span>
+          <Stars rating={movie.vote_average} votes={movie.vote_count} />
+          <span className="movie-duration"><strong>{durationAndGenre}</strong></span>
+          <p>{this.props.movie.overview}</p>
+        </div>
       </div>
     )
   }

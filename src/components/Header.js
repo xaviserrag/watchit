@@ -7,7 +7,7 @@ class Header extends Component {
       <div className="Header">
         <img src="logo-white.png" alt="logo" />
       </div>
-    );
+    ); 
   }
 };
 

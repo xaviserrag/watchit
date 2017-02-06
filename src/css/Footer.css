@@ -2,7 +2,7 @@
    position:fixed;
    left:0px;
    bottom:0px;
-   height: 74px;
+   height: 105px;
    width:100%;
    background:#F8F8F8;
 }
@@ -11,7 +11,6 @@
 	-moz-box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.5);
 	box-shadow: 0px 1px 0px 1px rgba(0,0,0,0.5);
-
 	background-color:#ED4970;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -27,9 +26,9 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
 	margin-left: 0;
-
 	width: 296px;
 	height: 60px;
+	max-width: 60%;
 }
 
 .Footer button:hover {
@@ -39,6 +38,7 @@
 .Footer button:active {
 	position:relative;
 	top:1px;
+	background-color:#E42652;
 	outline: none;
 }
 
@@ -50,6 +50,7 @@
 	float: right;
   width: 50px;
   height: 54px;
-	margin-left: -60px;
-	margin-right: 10px;
+	margin-left: -90px;
+	margin-right: 40px;
+	margin-top: 8px;
 }

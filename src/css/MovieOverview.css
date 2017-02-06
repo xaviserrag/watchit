@@ -1,0 +1,31 @@
+
+.MovieOverview .basic-info {
+  position: relative;
+  width: 49%;
+  float: left;
+  margin-top: 50px;
+  margin-left: 5%;
+  text-align: left;
+}
+
+.MovieOverview .basic-info .movie-title {
+  font-size: 1.3rem;
+  color: #ED4970;
+}
+
+.MovieOverview .basic-info .movie-duration {
+  margin-top: 10px;
+  color: #5A5A5A;
+}
+
+.MovieOverview img {    
+  position: relative;
+  float: left;
+  height: 519px;
+  width: 346px;
+  object-fit: cover;
+}
+
+.MovieOverview img[src=""] {
+	display: none;
+}
