@@ -6,6 +6,7 @@
    width: 100%;
    background: #ED4970;
 	 margin-bottom: 74px;
+	 z-index: 10;
 }
 
 .Header img {
@@ -15,7 +16,7 @@
 }
 
 
-@media screen and (max-device-width: 700px) { 
+@media screen and (max-width: 700px) { 
 	.Header {
 		height: 60px;
 	}

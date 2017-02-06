@@ -14,11 +14,13 @@ class Movie extends Component {
 
     if (hasMovie) {
       return (
-        <section id="Movie" className={isLoadingClass}>
-          <article>
-            <MovieOverview movie={movie} />
-          </article>
-        </section>
+        <div className="MovieContainer">
+          <section id="Movie" className={isLoadingClass}>
+            <article>
+              <MovieOverview movie={movie} />
+            </article>
+          </section>
+        </div>
       )
     } else {
       return <div></div>

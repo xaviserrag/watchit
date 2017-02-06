@@ -3,6 +3,8 @@
   height: calc(100vh - 125px);
   white-space: nowrap;
   margin-bottom: -125px;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .logo-top {

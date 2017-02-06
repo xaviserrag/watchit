@@ -7,11 +7,16 @@ const IMG_BASE_URL = 'https://image.tmdb.org/t/p/w500/';
 class MovieOverview extends Component {
   render() {
     let movie = this.props.movie;
-
     let imagePath = movie.poster_path 
       ? movie.poster_path 
       : movie.backdrop_path;
-    let imgUrl = IMG_BASE_URL + imagePath;
+    
+    let imgUrl;
+    if (!imagePath) {
+      imgUrl = 'no-image-available.png';
+    } else {
+      imgUrl = IMG_BASE_URL + imagePath;
+    }
     
 
    

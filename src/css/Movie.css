@@ -1,17 +1,22 @@
+.MovieContainer {
+  width: 100vw;
+  height: calc(100vh - 270px);
+  overflow: hidden;
+  margin-bottom: 130px;  
+  margin-top: 120px;
+}
 #Movie {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  width: 70vw;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 70%;
   color: #262e31;
   background-color: #fff;
   -moz-box-shadow: 0px 6px 1px 0px rgba(171,171,171,0.5);
 	-webkit-box-shadow: 0px 6px 1px 0px rgba(171,171,171,0.5);  
   box-shadow: 0px 6px 1px 0px rgba(171,171,171,0.5);
-
-  margin-bottom: 130px;  
-  height: calc(100vh - 270px);
-  margin-top: 120px;
+  height: 100%;
   overflow-y: scroll;
+  z-index: 9;
 }
 
  #Movie::-webkit-scrollbar { 
@@ -21,11 +26,15 @@
 #Movie.movie-easein {
   animation: movie-appearance 0.5s;
   animation-fill-mode:forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 #Movie.movie-easeout {
   animation: movie-dissapear 0.5s;
   animation-fill-mode:forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @keyframes movie-appearance {
@@ -77,7 +86,7 @@
 }
 
 @media screen and (max-width: 700px) { 
-  #Movie { 
+  #MovieContainer { 
     margin-top: 80px;
     height: calc(100vh - 210px);
   }
