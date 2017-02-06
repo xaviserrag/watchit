@@ -6,6 +6,16 @@ import MovieOverview from './MovieOverview';
 import '../css/Movie.css';
 
 class Movie extends Component {
+
+  componentWillUpdate() {
+    setTimeout(() => {
+      let item = document.getElementById('Movie');
+      if (item) {
+        item.scrollTop = 0;
+      }
+    }, 500)
+  }
+
   render() {
     let movie = this.props.movie;
     let hasMovie = movie.title;
