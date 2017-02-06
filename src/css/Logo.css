@@ -4,6 +4,7 @@
   white-space: nowrap;
   margin-bottom: -125px;
 }
+
 .logo-top {
   display: none;
 }
@@ -16,11 +17,17 @@
 
 .logo-centered img {
   vertical-align: middle;
-  width: 405px;
-  height: 116px;
+  width: 321px;
+  height: 314px;
   max-width: 90vw;
   animation: logo-appearance 0.7s;
 }
+
+.logo-centered img.logo-easeout {
+  animation: logo-dissapear 0.5s;
+  animation-fill-mode:forwards;
+}
+
 
 @keyframes logo-appearance {
   0% {
@@ -30,5 +37,14 @@
   100% {
     opacity: 1;
     margin-top: 0px;
+  }
+}
+
+@keyframes logo-dissapear {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -200%;
   }
 }

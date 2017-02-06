@@ -68,7 +68,6 @@
   #Movie img {    
     width: 40%;
     height: 100%;
-    /*height: calc(40% * 750px);*/
     object-fit: cover;
   }
 
