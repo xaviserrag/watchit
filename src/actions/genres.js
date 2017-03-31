@@ -2,8 +2,7 @@ import fetch from 'isomorphic-fetch';
 
 export const REQUEST_GENRES = 'REQUEST_GENRES';
 export const RECEIVE_GENRES = 'RECEIVE_GENRES';
-export const ADD_GENRE = 'ADD_GENRE';
-export const REMOVE_GENRE = 'REMOVE_GENRE';
+export const SELECT_GENRE = 'SELECT_GENRE';
 
 export function requestGenres() {
   return {
@@ -36,16 +35,9 @@ export function fetchGenres() {
   };
 };
 
-export function addGenre(genre) {
+export function selectGenre(genre) {
   return {
-    type: ADD_GENRE,
-    genre: genre,
-  }
-}
-
-export function removeGenre(genre) {
-  return {
-    type: REMOVE_GENRE,
-    genre: genre,
+    type: SELECT_GENRE,
+    genre,
   }
 }

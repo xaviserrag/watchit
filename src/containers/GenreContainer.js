@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import GenreList from '../components/GenreList';
-import { addGenre } from '../actions/genres.js';
+import { selectGenre } from '../actions/genres.js';
 
 const mapStateToProps = (state) => state.genres || {};
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onGenreClick: () => {
-      dispatch(addGenre())} 
+    onSelectGenre: (genre) => {
+      dispatch(selectGenre(genre))} 
   }
 }
 

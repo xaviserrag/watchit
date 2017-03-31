@@ -101,7 +101,7 @@ export function fetchMovieIfAvailable() {
   return (dispatch, getState) => {
     let state = getState();
     if (shouldFetchMovie(state)) {
-      return dispatch(fetchMovie(state.genres))
+      return dispatch(fetchMovie(state.genres.genreList, state.genres.selectedGenres))
     } else {
       return Promise.resolve();
     }

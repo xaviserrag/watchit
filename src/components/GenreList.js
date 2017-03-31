@@ -7,17 +7,20 @@ class GenreList extends Component {
   }
 
   render() {
-    console.log(this.props);
-
     let listOfGenres = [];
     for (let key in this.props.genreList) {
+      let genre = this.props.genreList[key];
+      let className = this.props.selectedGenres.filter((item) => {
+        return key === item
+      }).length > 0 ? 'genre-selected' : ''
+      console.log(className)
       listOfGenres.push(
-        <li key={key}>this.props.genreList[key]</li>
+        <li className={className} onClick={() => {this.props.onSelectGenre(key)}} key={key}>{genre}</li>
       )
     }
 
     return (
-    <div className="GenreList">
+    <div id="GenreList">
         <ul>
           {listOfGenres}
         </ul>

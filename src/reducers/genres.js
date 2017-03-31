@@ -1,9 +1,33 @@
 import {
-  REQUEST_GENRES, RECEIVE_GENRES, ADD_GENRE, REMOVE_GENRE
+  REQUEST_GENRES, RECEIVE_GENRES, SELECT_GENRE
 } from '../actions/genres';
 
-export default (state = {}, action) => {
+let defaultState = {
+  genresList: {},
+  selectedGenres: []
+}
+
+
+export default (state = defaultState, action) => {
   switch (action.type) {
+    case SELECT_GENRE:
+      let currentGenres = state.selectedGenres.slice();
+      let selected = false;
+      for (let i = 0; i < currentGenres.length; i++) {
+        if (currentGenres[i] === action.genre) {
+          currentGenres.splice(i, 1);
+          selected = true;
+          break;
+        }
+      }
+
+      if (!selected) {
+        currentGenres.push(action.genre)
+      }
+
+      return Object.assign({}, state, {
+        selectedGenres: currentGenres,
+      });
     case RECEIVE_GENRES:
       return Object.assign({}, state, {
         genreList: action.genres
