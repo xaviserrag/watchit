@@ -17,19 +17,15 @@ class MovieOverview extends Component {
     } else {
       imgUrl = IMG_BASE_URL + imagePath;
     }
-    
-
    
     let yearRelease = movie.release_date.split('-')[0];
-    let title = `${movie.title} (${yearRelease})`;
-
     let duration = '';
     if (movie.runtime) {
       duration = Math.floor(movie.runtime / 60) + 'h ' + movie.runtime % 60 + 'm';
     }
 
     let durationAndGenre = duration;
-    let genresList = movie.genres.map((genre) =>
+    movie.genres.map((genre) =>
       durationAndGenre += (' | ' + genre.name)
     );
 

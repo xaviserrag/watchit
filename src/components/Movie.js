@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
+// import { findDOMNode } from 'react-dom';
 
 import MovieOverview from './MovieOverview';
 // import MovieSynopsis from './MovieSynopsis';
