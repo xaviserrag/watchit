@@ -6,6 +6,7 @@ class Header extends Component {
     return (
       <div className="Header">
         <img src="logo-white.png" alt="logo" />
+        <div className="top-placeholder"> ADVERTISMENT! </div>
       </div>
     ); 
   }

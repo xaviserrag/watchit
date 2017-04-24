@@ -7,7 +7,6 @@ let defaultState = {
   selectedGenres: []
 }
 
-
 export default (state = defaultState, action) => {
   switch (action.type) {
     case SELECT_GENRE:
@@ -32,7 +31,6 @@ export default (state = defaultState, action) => {
       return Object.assign({}, state, {
         genreList: action.genres
       });
-      return action.genres;
     case REQUEST_GENRES:
     default:
       return state;
