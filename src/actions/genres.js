@@ -19,11 +19,9 @@ export function receiveGenres(genres) {
 
 export function fetchGenres() {
   return function (dispatch) {
-
     let url = 'https://api.themoviedb.org/3/genre/movie/list?api_key=23564cb33be66abe06ab37d2417ce3b3&language=en-US'
 
     dispatch(requestGenres());
-
     return fetch(url)
       .then(response => response.json())
       .then(data => {

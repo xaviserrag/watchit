@@ -8,8 +8,15 @@ class GenreList extends Component {
 
   render() {
     let listOfGenres = [];
-    for (let key in this.props.genreList) {
-      let genre = this.props.genreList[key];
+    let genreList = {
+      comedy: 'comedy',
+      drama: 'drama',
+      action: 'action',
+      documentary: 'documentary',
+      history: 'history'
+    }
+    for (let key in genreList) {
+      let genre = genreList[key];
       let className = this.props.selectedGenres.filter((item) => {
         return key === item
       }).length > 0 ? 'genre-selected' : ''
@@ -20,11 +27,9 @@ class GenreList extends Component {
     }
 
     return (
-    <div id="GenreList">
-        <ul>
-          {listOfGenres}
-        </ul>
-    </div>
+    <ul id="GenreList">
+      {listOfGenres}
+    </ul>
     )
   }
 };
