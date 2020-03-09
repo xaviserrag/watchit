@@ -15,7 +15,6 @@ class App extends Component {
       <div className="App">
         <Header />
         <LogoContainer />
-        <GenreContainer />
         <MovieContainer />
         <FooterContainer />
       </div>

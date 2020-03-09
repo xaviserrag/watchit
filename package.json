@@ -26,5 +26,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://xaviserrag.github.io/watchit"
+  "homepage": "http://xaviserrag.github.io/"
 }
